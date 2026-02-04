@@ -1,0 +1,27 @@
+{
+    "name": "workbench/contactform",
+    "description": "laravel contact form package",
+    "type": "package",
+    "license": "MIT",
+   "autoload": {
+        "psr-4": {
+            "Workbench\\ContactForm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "santosh"
+        }
+    ],
+    "extra": {
+        "laravel": {
+           "providers": [
+                "Workbench\\ContactForm\\ContactFormServiceProvider"
+            ]
+
+        }
+
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
