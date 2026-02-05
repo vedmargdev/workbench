@@ -16,6 +16,19 @@
     <h2 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Contact Form</h2>
     <p class="mt-2 text-lg/8 text-gray-400">Fill out the form below and our team will get back to you shortly.</p>
   </div>
+
+  @if (session('success'))
+      <div class="mx-auto max-w-xl mb-6 rounded-md bg-green-500/10 p-4 text-green-400 border border-green-500/20">
+          {{ session('success') }}
+      </div>
+  @endif
+
+  @if (session('error'))
+      <div class="mx-auto max-w-xl mb-6 rounded-md bg-red-500/10 p-4 text-red-400 border border-red-500/20">
+          {{ session('error') }}
+      </div>
+  @endif
+
   <form action="{{ route('submit.message') }}" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
     @csrf
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -34,7 +47,7 @@
         <label for="last-name" class="block text-sm/6 font-semibold text-white">Last name</label>
         <div class="mt-2.5">
           <input id="last-name" type="text" name="lname" autocomplete="family-name" class="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500" />
-            @error('fname')
+            @error('lname')
               <div class="text-red-800">
                 {{ $message }}
               </div>
@@ -44,8 +57,8 @@
       <div class="sm:col-span-2">
         <label for="company" class="block text-sm/6 font-semibold text-white">Company</label>
         <div class="mt-2.5">
-          <input id="company" type="text" name="company" autocomplete="organization" class="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500" />
-            @error('lname')
+          <input id="company" type="text" name="company" autocomplete="company" class="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500" />
+             @error('company')
               <div class="text-red-800">
                 {{ $message }}
               </div>
@@ -93,4 +106,10 @@
   </form>
 </div>
 </body>
+<script>
+    setTimeout(() => {
+        document.querySelectorAll('[class*="bg-green"], [class*="bg-red"]').forEach(el => el.remove());
+    }, 4000);
+</script>
+
 </html>

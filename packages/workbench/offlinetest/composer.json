@@ -1,0 +1,35 @@
+{
+    "name": "workbench/offlinetest",
+    "description": "packages for offlinetest",
+    "type": "package",
+    "license": "MIT",
+    
+    "autoload": {
+        "psr-4": {
+            "Workbench\\OfflineTest\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+            ]
+    },
+    "authors": [
+        {
+            "name": "vedmarg"
+        }
+    ],
+    "extra": {
+        "laravel": {
+           "providers": [
+                "Workbench\\OfflineTest\\OfflineTestServiceProvider"
+            ]
+
+        }
+
+    },
+    "minimum-stability": "dev",
+    "require": {
+            "jenssegers/agent": "^2.6"
+        },
+
+    "prefer-stable": true
+}
