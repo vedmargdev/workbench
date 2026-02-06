@@ -1,0 +1,27 @@
+{
+  "name": "workbench/laraveldeskslip",
+  "description": "The core package for Vedmarg ERP.",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Workbench\\LaravelDeskslip\\": "src/"
+    },
+    "files": [
+      "src/Helpers/helpers.php"
+    ]
+  },
+ "extra": {
+  "laravel": {
+    "providers": [
+      "Workbench\\LaravelDeskslip\\LaravelDeskslipServiceProvider"
+    ]
+  }
+},
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT",
+  "require-dev": {
+    "orchestra/testbench": "^10.8"
+
+  }
+}

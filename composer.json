@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.10.1",
         "spatie/laravel-activitylog": "^4.11",
         "workbench/contactform": "dev-main",
+        "workbench/laraveldeskslip": "@dev",
         "workbench/offlinetest": "dev-main"
     },
     "require-dev": {
@@ -91,8 +92,17 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type":"path",
+            "url": "packages/workbench/laraveldeskslip",
+            "options": {
+                "symlink": true
+            }
         }
     ],
+
+    
 
     "config": {
         "optimize-autoloader": true,

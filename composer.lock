@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb5467efe3728c09755a2c0a88e23542",
+    "content-hash": "d4c4ee225a902d037c5b15a987895448",
     "packages": [
         {
             "name": "brick/math",
@@ -6389,6 +6389,42 @@
             }
         },
         {
+            "name": "workbench/laraveldeskslip",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/workbench/laraveldeskslip",
+                "reference": "000153d75fc6b9eeb4b47338f7431fdf04e156c6"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^10.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Workbench\\LaravelDeskslip\\LaravelDeskslipServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Workbench\\LaravelDeskslip\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/helpers.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "The core package for Vedmarg ERP.",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "workbench/offlinetest",
             "version": "dev-main",
             "dist": {
@@ -8812,6 +8848,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "workbench/contactform": 20,
+        "workbench/laraveldeskslip": 20,
         "workbench/offlinetest": 20
     },
     "prefer-stable": true,
